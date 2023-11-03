@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <!-- Add Popper.js (required by Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+
+    <!-- Add the Bootstrap JavaScript (version 5.3.2) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    body {
+        background-image: url(/asiamap.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        width: auto;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .countrycard {
+        color: white;
+    }
+
+    .countrycard1 {
+        background-color: rgb(97 97 97 / 71%);
+        color: white;
+        border: 1px solid #cfe2ff;
+        margin: 5px;
+    }
+
+    .countrycard2 {
+        background-color: rgb(97 97 97 / 71%);
+        color: white;
+        border: 1px solid #cfe2ff;
+
+    }
+
+    .countrycard1:hover {
+        background-color: black;
+        border-color: white;
+        transition: transform 0.4s;
+        transform: scale(1.1);
+    }
+
+    .btnstyle:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .collapse.slide-to-left {
+        animation-name: slideInFromRight;
+    }
+
+    @keyframes slideInFromRight {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .footer {
+        background-color: rgb(97 97 97 / 71%);
+        color: white;
+        text-align: center;
+        border: 2px solid white;
+        height: 40px;
+        border-radius: 5px;
+        padding: 7px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-grey">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Asia Time</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </ul> -->
+                <!-- <form class="d-flex" role="search">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search Asian Country"
+                        aria-label="Search">
+                    <button id="searchButton" class="btn btn-outline-black bg-light text-black btnstyle"
+                        type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <div class="jumbotron countrycard">
+            <h1 class="display-7">Time: <span id="indiatime"></span></h1>
+            <h1><span id="indiadate"></span></h1>
+            <h1 class="display-7"></h1>
+            <p class="lead"><strong>Indian Standard Time</strong> </p>
+            <hr class="my-4">
+            <h3>Browse the Time of different countries of Asia Region</h3>
+            <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Browse Times</a> -->
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class="col-12">
+            <div class="col d-flex flex-wrap justify-content-between">
+                <button class="btn btn-secondary countrycard1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample1">
+                    Eastern Asia
+                </button>
+                <button class="btn btn-secondary countrycard1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample2">
+                    Western Asia
+                </button>
+                <button class="btn btn-secondary countrycard1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample3" aria-expanded="false" aria-controls="collapseWidthExample3">
+                    Central Asia
+                </button>
+                <button class="btn btn-secondary countrycard1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample4" aria-expanded="false" aria-controls="collapseWidthExample4">
+                    Southeast Asia
+                </button>
+                <button class="btn btn-secondary countrycard1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample5" aria-expanded="false" aria-controls="collapseWidthExample5">
+                    South Asia
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+
+        <div class="row">
+            <div class="collapse collapse-horizontal text-white " id="collapseWidthExample1">
+                <h5>EASTERN ASIA Countries:</h5>
+                <div class=" card card-body countrycard1 cardsstyle" style="width: 300px;">
+                    <h5 class="display-7">CHINA </h5>
+                    <h6 class="display-7"><span id="chinatime"></span></h6>
+                    <h6 class="display-7"><span id="chinadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">JAPAN </h5>
+                    <h6 class="display-7"><span id="japantime"></span></h6>
+                    <h6 class="display-7"><span id="japandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">SOUTH KOREA </h5>
+                    <h6 class="display-7"><span id="southkoreatime"></span></h6>
+                    <h6 class="display-7"><span id="southkoreadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">NORTH KOREA </h5>
+                    <h6 class="display-7"><span id="northkoreatime"></span></h6>
+                    <h6 class="display-7"><span id="northkoreadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">MONGOLIA </h5>
+                    <h6 class="display-7"><span id="mongoliatime"></span></h6>
+                    <h6 class="display-7"><span id="mongoliadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">TAIWAN </h5>
+                    <h6 class="display-7"><span id="taiwantime"></span></h6>
+                    <h6 class="display-7"><span id="taiwandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">HONGKONG </h5>
+                    <h6 class="display-7"><span id="hongkongtime"></span></h6>
+                    <h6 class="display-7"><span id="hongkongdate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">MACAU </h5>
+                    <h6 class="display-7"><span id="macautime"></span></h6>
+                    <h6 class="display-7"><span id="macaudate"></span></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="collapse collapse-horizontal text-white " id="collapseWidthExample2">
+                <h5>WESTERN ASIA Countries:</h5>
+                <div class="card card-body countrycard1 " style="width: 300px;">
+                    <h5 class="display-7">Turkey </h5>
+                    <h6 class="display-7"><span id="turkeytime"></span></h6>
+                    <h6 class="display-7"><span id="turkeydate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Iran </h5>
+                    <h6 class="display-7"><span id="irantime"></span></h6>
+                    <h6 class="display-7"><span id="irandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Iraq </h5>
+                    <h6 class="display-7"><span id="iraqtime"></span></h6>
+                    <h6 class="display-7"><span id="iraqdate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Syria </h5>
+                    <h6 class="display-7"><span id="syriatime"></span></h6>
+                    <h6 class="display-7"><span id="syriadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Lebanon </h5>
+                    <h6 class="display-7"><span id="lebanontime"></span></h6>
+                    <h6 class="display-7"><span id="lebanondate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Israel </h5>
+                    <h6 class="display-7"><span id="israeltime"></span></h6>
+                    <h6 class="display-7"><span id="israeldate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Palestine </h5>
+                    <h6 class="display-7"><span id="palestinetime"></span></h6>
+                    <h6 class="display-7"><span id="palestinedate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Saudi Arabia </h5>
+                    <h6 class="display-7"><span id="sauditime"></span></h6>
+                    <h6 class="display-7"><span id="saudidate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Yemen </h5>
+                    <h6 class="display-7"><span id="yementime"></span></h6>
+                    <h6 class="display-7"><span id="yemendate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Oman </h5>
+                    <h6 class="display-7"><span id="omantime"></span></h6>
+                    <h6 class="display-7"><span id="omandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">United Arab Emirates </h5>
+                    <h6 class="display-7"><span id="uaetime"></span></h6>
+                    <h6 class="display-7"><span id="uaedate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Qatar </h5>
+                    <h6 class="display-7"><span id="qatartime"></span></h6>
+                    <h6 class="display-7"><span id="qatardate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Bahrain </h5>
+                    <h6 class="display-7"><span id="bahraintime"></span></h6>
+                    <h6 class="display-7"><span id="bahraindate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Kuwait </h5>
+                    <h6 class="display-7"><span id="kuwaittime"></span></h6>
+                    <h6 class="display-7"><span id="kuwaitdate"></span></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="collapse collapse-horizontal text-white" id="collapseWidthExample3">
+                <h5>CENTRAL ASIA Countries:</h5>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Kazakhstan </h5>
+                    <h6 class="display-7"><span id="kazakhstantime"></span></h6>
+                    <h6 class="display-7"><span id="kazakhstandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Uzbekistan </h5>
+                    <h6 class="display-7"><span id="uzbekistantime"></span></h6>
+                    <h6 class="display-7"><span id="uzbekistandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Tajikistan </h5>
+                    <h6 class="display-7"><span id="tajikistantime"></span></h6>
+                    <h6 class="display-7"><span id="tajikistandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Kyrgyzstan </h5>
+                    <h6 class="display-7"><span id="kyrgyzstantime"></span></h6>
+                    <h6 class="display-7"><span id="kyrgyzstandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Turkmenistan </h5>
+                    <h6 class="display-7"><span id="turkmenistantime"></span></h6>
+                    <h6 class="display-7"><span id="turkmenistandate"></span></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="collapse collapse-horizontal text-white" id="collapseWidthExample4">
+                <h5>SOUTHEAST ASIA Countries:</h5>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Thailand </h5>
+                    <h6 class="display-7"><span id="thailandtime"></span></h6>
+                    <h6 class="display-7"><span id="thailanddate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Vietnam </h5>
+                    <h6 class="display-7"><span id="vietnamtime"></span></h6>
+                    <h6 class="display-7"><span id="vietnamdate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Cambodia </h5>
+                    <h6 class="display-7"><span id="cambodiatime"></span></h6>
+                    <h6 class="display-7"><span id="cambodiadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Laos </h5>
+                    <h6 class="display-7"><span id="laostime"></span></h6>
+                    <h6 class="display-7"><span id="laosdate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Myanmar </h5>
+                    <h6 class="display-7"><span id="myanmartime"></span></h6>
+                    <h6 class="display-7"><span id="myanmardate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Malaysia </h5>
+                    <h6 class="display-7"><span id="malaysiatime"></span></h6>
+                    <h6 class="display-7"><span id="malaysiadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Singapore </h5>
+                    <h6 class="display-7"><span id="singaporetime"></span></h6>
+                    <h6 class="display-7"><span id="singaporedate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Brunei </h5>
+                    <h6 class="display-7"><span id="bruneitime"></span></h6>
+                    <h6 class="display-7"><span id="bruneidate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Indonesia </h5>
+                    <h6 class="display-7"><span id="indonesiatime"></span></h6>
+                    <h6 class="display-7"><span id="indonesiadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Tomor-Leste </h5>
+                    <h6 class="display-7"><span id="timortime"></span></h6>
+                    <h6 class="display-7"><span id="timordate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Philippines </h5>
+                    <h6 class="display-7"><span id="philippinestime"></span></h6>
+                    <h6 class="display-7"><span id="philippinesdate"></span></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="collapse collapse-horizontal text-white" id="collapseWidthExample5">
+                <h5>SOUTH ASIA Countries:</h5>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Pakistan </h5>
+                    <h6 class="display-7"><span id="pakistantime"></span></h6>
+                    <h6 class="display-7"><span id="pakistandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Nepal </h5>
+                    <h6 class="display-7"><span id="nepaltime"></span></h6>
+                    <h6 class="display-7"><span id="nepaldate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Sri Lanka </h5>
+                    <h6 class="display-7"><span id="srilankatime"></span></h6>
+                    <h6 class="display-7"><span id="srilankadate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Bangladesh </h5>
+                    <h6 class="display-7"><span id="bangladeshtime"></span></h6>
+                    <h6 class="display-7"><span id="bangladeshdate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Bhutan </h5>
+                    <h6 class="display-7"><span id="bhutantime"></span></h6>
+                    <h6 class="display-7"><span id="bhutandate"></span></h6>
+                </div>
+                <div class="card card-body countrycard1" style="width: 300px;">
+                    <h5 class="display-7">Maldives </h5>
+                    <h6 class="display-7"><span id="maldivestime"></span></h6>
+                    <h6 class="display-7"><span id="maldivesdate"></span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+    <footer class="footer">
+        <h6>Copyrights&copy; www.asiatime.com</h6>
+    </footer>
+    <!-- </div> -->
+
+</body>
+<script src="jscode.js"></script>
+
+</html>
