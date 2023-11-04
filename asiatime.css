@@ -1,0 +1,68 @@
+body {
+    background-image: url(/Projects/asiamap.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+.countrycard {
+    color: white;
+}
+
+.countrycard1 {
+    background-color: rgb(97 97 97 / 71%);
+    color: white;
+    border: 1px solid #cfe2ff;
+    margin: 5px;
+}
+
+.countrycard2 {
+    background-color: rgb(97 97 97 / 71%);
+    color: white;
+    border: 1px solid #cfe2ff;
+
+}
+
+.countrycard1:hover {
+    background-color: rgb(44, 39, 39);
+    border-color: white;
+    transition: transform 0.4s;
+    transform: scale(1.03);
+}
+
+.btnstyle:hover {
+    background-color: black;
+    color: white;
+}
+
+.collapse.slide-to-left {
+    animation-name: slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.footer {
+    background-color: rgb(97 97 97 / 71%);
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    height: 40px;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 220px;
+}
+
+.cardsstyle {
+    min-width: 300px;
+}
