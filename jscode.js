@@ -77,5 +77,5 @@ buttons.forEach(button => {
             }
         });
     })
-})
+});
 
