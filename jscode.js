@@ -1,7 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    function updateTime(id1, id2, timeZone) {
-        setInterval(() => {
+function updateTime(id1, id2, timeZone) {
+    setInterval(() => {
             const now = new Date();
             const options1 = {
                 timeZone: timeZone, hour: "2-digit", minute: "2-digit", second: "2-digit",
@@ -80,5 +78,3 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
     })
-});
-
