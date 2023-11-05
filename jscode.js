@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             collapses.forEach(collapse => {
                 if (collapse.id === target) {
                     $(target).collapse('toggle');
+                    width:100%
                 } else {
                     $(collapse).collapse('hide');
                 }
