@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 timeZone: timeZone, weekday: "long", month: "long", day: "2-digit", year: "numeric",
             };
             const formattedTime = now.toLocaleString("en-US", options1);
-            document.getElementById(id1).innerText = formattedTime;
+            $("#" + id1).text(formattedTime);
 
             const formattedDate = now.toLocaleString("en-US", options2);
-            document.getElementById(id2).innerText = formattedDate;
+            $("#" + id2).text(formattedDate);
+
         }, 1000)
     }
     updateTime("indiatime", "indiadate", "Asia/Kolkata");
@@ -80,3 +81,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 });
+
